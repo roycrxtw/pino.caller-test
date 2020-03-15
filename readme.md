@@ -1,6 +1,6 @@
 # README
 
-This is a record for the pino-caller stack trace offset adjustment.
+This is a record for the [pino-caller](https://github.com/pinojs/pino-caller) stack trace offset adjustment.
 
 ## Detail results
 
