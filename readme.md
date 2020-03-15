@@ -2,6 +2,23 @@
 
 This is a record for the [pino-caller](https://github.com/pinojs/pino-caller) stack trace offset adjustment.
 
+It seems that the current setting for the stack trace offset in the `pino-caller` does not work expectedly.
+
+If we adjust the offset setting from:
+
+```js
+const STACKTRACE_OFFSET = NODEJS_VERSION && NODEJS_VERSION > 6 ? 2 : 3
+```
+
+to
+
+```js
+const STACKTRACE_OFFSET = NODEJS_VERSION && NODEJS_VERSION > 6 ? 1 : 2
+```
+
+The caller result will print the expected line number.
+
+
 ## Detail results
 
 ### 12.16.1
